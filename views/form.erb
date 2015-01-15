@@ -1,0 +1,19 @@
+<div class="jumbotron">
+
+  <h1>CD Organizer</h1>
+
+
+</div>
+
+<form action="/artist" method="post">
+  <label for="artist_name">Enter artist name</label>
+  <input id="artist_name" name="artist_name" type="text">
+
+  <form action="album_name" method="post">
+    <label for="album_name">Enter album name</label>
+    <input id="album_name" name="album_name" type="text">
+
+<button type="submit" class="btn btn-success btn-lg">Add it!</button>
+</form>
+
+<p> <%= @list %> </p>
