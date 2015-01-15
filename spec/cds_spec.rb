@@ -4,7 +4,7 @@ require('cds')
 
   describe(Release) do
   before() do
-  Release.clear()  
+  Release.clear()
 end
 
 
@@ -21,6 +21,18 @@ end
         expect(Release.all()).to(eq([]))
       end
     end
+
+    describe('.list_all') do
+      it('shows all releases') do
+        test_cd = Release.new("summer", "calvin harris")
+        test_cd.save()
+        test_cd2 = Release.new("outside", "calvin harris")
+        test_cd2.save()
+        expect(Release.list_all()).to(eql([test_cd, test_cd2]))
+      end
+    end
+
+
   describe('#save') do
     it('adds new release to all releases') do
       test_cd = Release.new("summer", "calvin harris")

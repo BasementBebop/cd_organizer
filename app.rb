@@ -1,0 +1,6 @@
+require('sinatra')
+require('sinatra/reloader')
+require('cd_organizer')
+require('./lib/cds')
+require('./lib/cd_organizer')
+also_reload('./lib/**/*.rb')
